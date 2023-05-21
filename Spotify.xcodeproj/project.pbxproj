@@ -29,6 +29,7 @@
 		631A77892A18FD1F00474E03 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A77882A18FD1F00474E03 /* AudioTrack.swift */; };
 		631A778B2A18FD6100474E03 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A778A2A18FD6100474E03 /* Artist.swift */; };
 		631A778D2A18FD7B00474E03 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A778C2A18FD7B00474E03 /* UserProfile.swift */; };
+		63E062E22A1A83E6001C3B9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E062E12A1A83E6001C3B9A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		631A77882A18FD1F00474E03 /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		631A778A2A18FD6100474E03 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		631A778C2A18FD7B00474E03 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		63E062E12A1A83E6001C3B9A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				631A77592A18EF1B00474E03 /* Assets.xcassets */,
 				631A77502A18EF1900474E03 /* AppDelegate.swift */,
 				631A77522A18EF1900474E03 /* SceneDelegate.swift */,
+				63E062E12A1A83E6001C3B9A /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				631A77732A18FB2500474E03 /* AuthViewController.swift in Sources */,
 				631A77512A18EF1900474E03 /* AppDelegate.swift in Sources */,
 				631A778D2A18FD7B00474E03 /* UserProfile.swift in Sources */,
+				63E062E22A1A83E6001C3B9A /* Extensions.swift in Sources */,
 				631A776F2A18FA9500474E03 /* LibraryViewController.swift in Sources */,
 				631A778B2A18FD6100474E03 /* Artist.swift in Sources */,
 				631A777D2A18FBD700474E03 /* PlaylistViewController.swift in Sources */,
