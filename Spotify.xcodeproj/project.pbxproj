@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630ACB3C2A1EA713004FF322 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630ACB3B2A1EA713004FF322 /* AuthResponse.swift */; };
 		631A77512A18EF1900474E03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A77502A18EF1900474E03 /* AppDelegate.swift */; };
 		631A77532A18EF1900474E03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A77522A18EF1900474E03 /* SceneDelegate.swift */; };
 		631A77552A18EF1900474E03 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A77542A18EF1900474E03 /* HomeViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630ACB3B2A1EA713004FF322 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		631A774D2A18EF1900474E03 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		631A77502A18EF1900474E03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		631A77522A18EF1900474E03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				631A77882A18FD1F00474E03 /* AudioTrack.swift */,
 				631A778A2A18FD6100474E03 /* Artist.swift */,
 				631A778C2A18FD7B00474E03 /* UserProfile.swift */,
+				630ACB3B2A1EA713004FF322 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				631A77792A18FB9700474E03 /* ProfileViewController.swift in Sources */,
 				631A776B2A18F9D700474E03 /* TabBarViewController.swift in Sources */,
 				631A77852A18FCCD00474E03 /* HapticsManager.swift in Sources */,
+				630ACB3C2A1EA713004FF322 /* AuthResponse.swift in Sources */,
 				631A77892A18FD1F00474E03 /* AudioTrack.swift in Sources */,
 				631A77552A18EF1900474E03 /* HomeViewController.swift in Sources */,
 				631A77732A18FB2500474E03 /* AuthViewController.swift in Sources */,
