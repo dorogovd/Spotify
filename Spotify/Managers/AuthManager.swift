@@ -7,15 +7,19 @@
 
 import Foundation
 
-final class AuthManager { // аутентификация пользователя
+final class AuthManager { // аутентификация пользователя, получаем токен
     static let shared = AuthManager()
+    
+    var myInt: Int?
+    
+    private var refreshingToken = false
     
     struct Constants { // static свойства используем для всех экземпляров структур
         static let clientID = ""
         static let clientSecret = ""
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
         static let redirectURI = "https://www.redeyerecords.co.uk"
-        static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%user-read-email"
+        static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
     }
     
     private init() {}
@@ -24,6 +28,7 @@ final class AuthManager { // аутентификация пользовател
         
         let base = "https://accounts.spotify.com/authorize"
         let string = "\(base)?response_type=code&client_id=\(Constants.clientID)&scope=\(Constants.scopes)&redirect_uri=\(Constants.redirectURI)&show_dialog=TRUE"
+        print(string)
         return URL(string: string)
     }
     
@@ -86,30 +91,56 @@ final class AuthManager { // аутентификация пользовател
         
         request.setValue("Basic \(base64String)", forHTTPHeaderField: "Authorization")
         
-      let task = URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
             guard let data = data,
                   error == nil else {
                 completion(false)
                 return
             }
-          do {
-              let result = try JSONDecoder().decode(AuthResponse.self, from: data)
-              self?.cacheToken(result: result) // JSON – short for JavaScript Object Notation – is a way of describing data.
-              completion(true)
-          }
-          catch {
-              print(error.localizedDescription)
-              completion(false)
-          }
+            do {
+                let result = try JSONDecoder().decode(AuthResponse.self, from: data)
+                self?.cacheToken(result: result) // JSON – short for JavaScript Object Notation – is a way of describing data.
+                completion(true)
+            }
+            catch {
+                print(error.localizedDescription)
+                completion(false)
+            }
         }
         task.resume()
     }
     
+    private var onRefreshBlocks = [((String) -> Void)]()
+    
+    /// Supplies valid token to be used withAPI Calls (предоставляет действительный токен)
+    public func withValidToken(completion: @escaping (String) -> Void) {
+        guard !refreshingToken else {
+            // Append the completion
+            onRefreshBlocks.append(completion)
+            return
+        }
+        if shouldRefreshToken {
+            // Refresh
+            refreshIfNeeded { [weak self] success in
+                if let token = self?.accessToken {
+                    completion(token)
+                }
+            }
+        }
+        else if let token = accessToken {
+            completion(token)
+        }
+    }
+    
     public func refreshIfNeeded(completion: @escaping (Bool) -> Void) {
-//        guard shouldRefreshToken else {
-//            completion(true)
-//            return
-//        }
+        guard !refreshingToken else {
+            return
+        }
+        
+        guard shouldRefreshToken else {
+            completion(true)
+            return
+        }
         
         guard let refreshToken = self.refreshToken else {
             return
@@ -119,6 +150,8 @@ final class AuthManager { // аутентификация пользовател
         guard let url = URL(string: Constants.tokenAPIURL) else {
             return
         }
+        
+        refreshingToken = true
         
         var components = URLComponents()
         components.queryItems = [
@@ -143,22 +176,24 @@ final class AuthManager { // аутентификация пользовател
         
         request.setValue("Basic \(base64String)", forHTTPHeaderField: "Authorization")
         
-      let task = URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, _, error in
+            self?.refreshingToken = false
             guard let data = data,
                   error == nil else {
                 completion(false)
                 return
             }
-          do {
-              let result = try JSONDecoder().decode(AuthResponse.self, from: data)
-              print("Successfully refreshed")
-              self?.cacheToken(result: result) // JSON – short for JavaScript Object Notation – is a way of describing data.
-              completion(true)
-          }
-          catch {
-              print(error.localizedDescription)
-              completion(false)
-          }
+            do {
+                let result = try JSONDecoder().decode(AuthResponse.self, from: data)
+                self?.onRefreshBlocks.forEach { $0(result.access_token) }
+                self?.onRefreshBlocks.removeAll()
+                self?.cacheToken(result: result) // JSON – short for JavaScript Object Notation – is a way of describing data.
+                completion(true)
+            }
+            catch {
+                print(error.localizedDescription)
+                completion(false)
+            }
         }
         task.resume()
     }

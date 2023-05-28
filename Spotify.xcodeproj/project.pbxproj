@@ -30,6 +30,7 @@
 		631A77892A18FD1F00474E03 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A77882A18FD1F00474E03 /* AudioTrack.swift */; };
 		631A778B2A18FD6100474E03 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A778A2A18FD6100474E03 /* Artist.swift */; };
 		631A778D2A18FD7B00474E03 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A778C2A18FD7B00474E03 /* UserProfile.swift */; };
+		637175C52A23945A007C8976 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637175C42A23945A007C8976 /* SettingsModels.swift */; };
 		63E062E22A1A83E6001C3B9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E062E12A1A83E6001C3B9A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		631A77882A18FD1F00474E03 /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		631A778A2A18FD6100474E03 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		631A778C2A18FD7B00474E03 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		637175C42A23945A007C8976 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		63E062E12A1A83E6001C3B9A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				631A778A2A18FD6100474E03 /* Artist.swift */,
 				631A778C2A18FD7B00474E03 /* UserProfile.swift */,
 				630ACB3B2A1EA713004FF322 /* AuthResponse.swift */,
+				637175C42A23945A007C8976 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				63E062E22A1A83E6001C3B9A /* Extensions.swift in Sources */,
 				631A776F2A18FA9500474E03 /* LibraryViewController.swift in Sources */,
 				631A778B2A18FD6100474E03 /* Artist.swift in Sources */,
+				637175C52A23945A007C8976 /* SettingsModels.swift in Sources */,
 				631A777D2A18FBD700474E03 /* PlaylistViewController.swift in Sources */,
 				631A77532A18EF1900474E03 /* SceneDelegate.swift in Sources */,
 				631A777B2A18FBBC00474E03 /* PlayerViewController.swift in Sources */,
