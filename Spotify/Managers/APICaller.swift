@@ -20,12 +20,16 @@ final class APICaller { // эндпоинт, ссылка блять, запро
         case failedToGetData
     }
     
-    public func getCurrentUserProfile(completion: @escaping (Result<String, Error>) -> Void) {
+    
+    
+    public func getCurrentUserProfile(dima: Bool) {}
+    
+    public func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void)  {
         createRequest(
             with: URL(string: Constants.baseAPIURL + "/me"),
-            type: .GET
-        ) { baseRequest in
-            let task = URLSession.shared.dataTask(with: baseRequest) { data, _, error in
+            type: .GET,
+            completion: { baseRequest in
+            let task = URLSession.shared.dataTask(with: baseRequest ) { data, _, error in
                 guard let data = data, error == nil else {
                     completion(.failure(APIError.failedToGetData))
                     return
@@ -33,7 +37,10 @@ final class APICaller { // эндпоинт, ссылка блять, запро
                 
                 do {
                     let result = try JSONDecoder().decode(UserProfile.self, from: data)
-                    print(result)
+                    //JSONSerialization.jsonObject(with: data, options: .allowFragments) - показать джончик
+                   // print(result)
+                    completion(.success(result))
+                    
                 }
                 catch {
                     print(error.localizedDescription)
@@ -41,11 +48,10 @@ final class APICaller { // эндпоинт, ссылка блять, запро
                 }
             }
             task.resume()
-        }
+        })
     }
 }
 
-func completion(someArgiment: Result<UserProfile, Error>) -> Void { }
 
 
 // Mark: - Private

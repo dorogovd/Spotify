@@ -22,10 +22,11 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         configureModels()
         title = "Settings"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .green
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
+        print("sections: prosto simvol \(sections)")
     }
     
     private func configureModels() {
@@ -77,7 +78,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // Call handler for cll
+        // Call handler for cell
         let model = sections[indexPath.section].options[indexPath.row]
         model.handler()
     }
