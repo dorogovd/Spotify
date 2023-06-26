@@ -39,6 +39,7 @@
 		634E44A52A437D4E00353E55 /* RecommendationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E44A42A437D4E00353E55 /* RecommendationsResponse.swift */; };
 		635504C02A34B65600D6D831 /* NewReleasesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635504BF2A34B65600D6D831 /* NewReleasesResponse.swift */; };
 		635504C22A34B9BD00D6D831 /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635504C12A34B9BD00D6D831 /* APIImage.swift */; };
+		635896852A473B36007A12ED /* NewReleasesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635896842A473B36007A12ED /* NewReleasesCellViewModel.swift */; };
 		637175C52A23945A007C8976 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637175C42A23945A007C8976 /* SettingsModels.swift */; };
 		63E062E22A1A83E6001C3B9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E062E12A1A83E6001C3B9A /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		634E44A42A437D4E00353E55 /* RecommendationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsResponse.swift; sourceTree = "<group>"; };
 		635504BF2A34B65600D6D831 /* NewReleasesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesResponse.swift; sourceTree = "<group>"; };
 		635504C12A34B9BD00D6D831 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
+		635896842A473B36007A12ED /* NewReleasesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesCellViewModel.swift; sourceTree = "<group>"; };
 		637175C42A23945A007C8976 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		63E062E12A1A83E6001C3B9A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6FA533AE019586E5F81F9B5D /* Pods-Spotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spotify.release.xcconfig"; path = "Target Support Files/Pods-Spotify/Pods-Spotify.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		631A77672A18F00D00474E03 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				635896842A473B36007A12ED /* NewReleasesCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				631A776D2A18FA4900474E03 /* SearchViewController.swift in Sources */,
 				631A77872A18FCFE00474E03 /* Playlist.swift in Sources */,
 				631A77812A18FC5D00474E03 /* AuthManager.swift in Sources */,
+				635896852A473B36007A12ED /* NewReleasesCellViewModel.swift in Sources */,
 				63421ADC2A463F7100C348E3 /* FeaturePlaylistCollectionViewCell.swift in Sources */,
 				631A777F2A18FC0400474E03 /* SearchResultsViewController.swift in Sources */,
 				631A77752A18FB4700474E03 /* WelcomeViewController.swift in Sources */,
