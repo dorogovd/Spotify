@@ -31,6 +31,8 @@
 		631A77892A18FD1F00474E03 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A77882A18FD1F00474E03 /* AudioTrack.swift */; };
 		631A778B2A18FD6100474E03 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A778A2A18FD6100474E03 /* Artist.swift */; };
 		631A778D2A18FD7B00474E03 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631A778C2A18FD7B00474E03 /* UserProfile.swift */; };
+		631D377F2A79287A00FCCAE6 /* SearchResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D377E2A79287A00FCCAE6 /* SearchResultResponse.swift */; };
+		631D37812A792DDC00FCCAE6 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631D37802A792DDC00FCCAE6 /* SearchResult.swift */; };
 		63310F2F2A5F3D2E00BB7A12 /* AllCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63310F2E2A5F3D2E00BB7A12 /* AllCategoriesResponse.swift */; };
 		63421ADA2A463F1D00C348E3 /* NewReleaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63421AD92A463F1D00C348E3 /* NewReleaseCollectionViewCell.swift */; };
 		63421ADC2A463F7100C348E3 /* FeaturePlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63421ADB2A463F7100C348E3 /* FeaturePlaylistCollectionViewCell.swift */; };
@@ -84,6 +86,8 @@
 		631A77882A18FD1F00474E03 /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		631A778A2A18FD6100474E03 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		631A778C2A18FD7B00474E03 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		631D377E2A79287A00FCCAE6 /* SearchResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultResponse.swift; sourceTree = "<group>"; };
+		631D37802A792DDC00FCCAE6 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		63310F2E2A5F3D2E00BB7A12 /* AllCategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCategoriesResponse.swift; sourceTree = "<group>"; };
 		63421AD92A463F1D00C348E3 /* NewReleaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		63421ADB2A463F7100C348E3 /* FeaturePlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				63DCB50F2A534B9100897B48 /* AlbumDetailsResponse.swift */,
 				63DCB5112A535E9F00897B48 /* PlaylistDetailsResponse.swift */,
 				63310F2E2A5F3D2E00BB7A12 /* AllCategoriesResponse.swift */,
+				631D377E2A79287A00FCCAE6 /* SearchResultResponse.swift */,
+				631D37802A792DDC00FCCAE6 /* SearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 				631A776D2A18FA4900474E03 /* SearchViewController.swift in Sources */,
 				63DCB5122A535E9F00897B48 /* PlaylistDetailsResponse.swift in Sources */,
 				631A77872A18FCFE00474E03 /* Playlist.swift in Sources */,
+				631D377F2A79287A00FCCAE6 /* SearchResultResponse.swift in Sources */,
 				631A77812A18FC5D00474E03 /* AuthManager.swift in Sources */,
 				635896852A473B36007A12ED /* NewReleasesCellViewModel.swift in Sources */,
 				63A8F6F72A5CA7B800C52E91 /* AlbumCollectionViewCellViewModel.swift in Sources */,
@@ -436,6 +443,7 @@
 				634E44A12A422F6000353E55 /* FeaturedPlaylistsResponse.swift in Sources */,
 				631A77512A18EF1900474E03 /* AppDelegate.swift in Sources */,
 				631A778D2A18FD7B00474E03 /* UserProfile.swift in Sources */,
+				631D37812A792DDC00FCCAE6 /* SearchResult.swift in Sources */,
 				63DCB5142A54AC0D00897B48 /* PlaylistHeaderCollectionReusableView.swift in Sources */,
 				63E062E22A1A83E6001C3B9A /* Extensions.swift in Sources */,
 				631A776F2A18FA9500474E03 /* LibraryViewController.swift in Sources */,
