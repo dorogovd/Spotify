@@ -40,7 +40,7 @@ final class PlayerControlsView: UIView {
         return label
     }()
     
-    private let subtitleLable: UILabel = {
+    private let subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Drake (feat. some other artist)"
         label.numberOfLines = 1
@@ -77,7 +77,7 @@ final class PlayerControlsView: UIView {
         super.init(frame: frame)
         backgroundColor = .clear
         addSubview(nameLabel)
-        addSubview(subtitleLable)
+        addSubview(subtitleLabel)
         
         addSubview(volumeSlider)
         volumeSlider.addTarget(self, action: #selector(didSlideSlider), for: .valueChanged)
@@ -123,9 +123,9 @@ final class PlayerControlsView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         nameLabel.frame = CGRect(x: 0, y: 0, width: width, height: 50)
-        subtitleLable.frame = CGRect(x: 0, y: nameLabel.bottom+10, width: width, height: 50)
+        subtitleLabel.frame = CGRect(x: 0, y: nameLabel.bottom+10, width: width, height: 50)
         
-        volumeSlider.frame = CGRect(x: 10, y: subtitleLable.bottom+20, width: width-20, height: 44)
+        volumeSlider.frame = CGRect(x: 10, y: subtitleLabel.bottom+20, width: width-20, height: 44)
         
         let buttonSize: CGFloat = 60
         playPauseButton.frame = CGRect(x: (width - buttonSize)/2, y: volumeSlider.bottom + 30, width: buttonSize, height: buttonSize)
@@ -135,6 +135,6 @@ final class PlayerControlsView: UIView {
     
     func configure(with viewModel: PlayerControlsViewViewModel) {
         nameLabel.text = viewModel.title
-        subtitleLable.text = viewModel.subtitle
+        subtitleLabel.text = viewModel.subtitle
     }
 }
