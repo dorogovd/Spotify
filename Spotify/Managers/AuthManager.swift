@@ -15,8 +15,8 @@ final class AuthManager { // аутентификация пользовател
     private var refreshingToken = false
     
     struct Constants { // static свойства используем для всех экземпляров структур
-        static let clientID = ""
-        static let clientSecret = ""
+        static let clientID = "111"
+        static let clientSecret = "111"
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
         static let redirectURI = "https://www.redeyerecords.co.uk"
         static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
@@ -112,7 +112,7 @@ final class AuthManager { // аутентификация пользовател
     
     private var onRefreshBlocks = [((String) -> Void)]()
     
-    /// Supplies valid token to be used withAPI Calls (предоставляет действительный токен)
+    // Supplies valid token to be used withAPI Calls (предоставляет действительный токен)
     public func withValidToken(completion: @escaping (String) -> Void) {
         guard !refreshingToken else {
             // Append the completion
